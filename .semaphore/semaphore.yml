@@ -24,3 +24,17 @@ blocks:
             - checkout
             - make app
             - artifact push workflow app
+  - name: Tests
+    task:
+      prologue:
+        commands:
+          - checkout
+          - artifact pull workflow app
+      jobs:
+        - name: Unit tests
+          commands:
+            - make test
+        - name: Lint
+          commands:
+            - apt-get update && apt-get install cppcheck
+            - make lint
