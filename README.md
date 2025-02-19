@@ -46,6 +46,6 @@ c-demo-project/
 
 You can also build and run tests all at once with:
 
-    ```bash
-    make all
-    ```
+```bash
+make all
+```
