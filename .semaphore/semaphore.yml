@@ -29,7 +29,6 @@ blocks:
       prologue:
         commands:
           - checkout
-          - artifact pull workflow app
       jobs:
         - name: Unit tests
           commands:
