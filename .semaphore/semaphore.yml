@@ -33,6 +33,7 @@ blocks:
         - name: Run app
           commands:
             - artifact pull workflow app
+            - chmod +x app
             - ./app
         - name: Lint
           commands:
