@@ -29,12 +29,15 @@ blocks:
       prologue:
         commands:
           - checkout
-          - artifact pull workflow app
       jobs:
-        - name: Unit tests
+        - name: Run app
           commands:
-            - make test
+            - artifact pull workflow app
+            - ./app
         - name: Lint
           commands:
             - apt-get update && apt-get install cppcheck
             - make lint
+        - name: Unit tests
+          commands:
+            - make test
