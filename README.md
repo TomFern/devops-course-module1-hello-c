@@ -49,3 +49,16 @@ You can also build and run tests all at once with:
 ```bash
 make all
 ```
+
+## Steps
+
+1. Fork this repository
+2. Add the repository to your Semaphore account
+3. Choose "I will use the existing configuration"
+4. Edit a file (e.g. `README.md`), commit and push the changes
+5. A new workflow should start in Semaphore
+6. Examine the error and fix the pipeline
+
+## Tips
+
+The `solution` branch contains the fixed pipeline.
